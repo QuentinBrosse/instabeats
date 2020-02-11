@@ -11,12 +11,20 @@ function trigger(id) {
 
 export function play(id) {
   const audio = document.getElementById(id + '-player')
-  audio.play()
+  try {
+    audio.play()
+  } catch (error) {
+    
+  }
 }
 
 export function pause(id) {
   const audio = document.getElementById(id + '-player')
-  audio.pause()
+  try {
+    audio.pause()
+  } catch (error) {
+    
+  }
 }
 
 function Beat(props) {
