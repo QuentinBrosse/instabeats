@@ -6,8 +6,8 @@ import Feed from './Feed'
 const bootstrap = ({ isLoggedIn, login, token, profile }) => {
   if (isLoggedIn()) {
     return (
-      <div>
-        <div>
+      <div className="root">
+        <div className="header">
           User: {profile.display_name}
         </div>
 
