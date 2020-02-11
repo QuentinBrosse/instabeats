@@ -30,7 +30,7 @@ function Beat(props) {
   return (
     <div id={props.track.id + '-beat'} onClick={() => trigger(props.track.id)} className="beat">
         <div className="beat-top">
-          <img className="artist_image" src={artist_image}></img>
+          <img alt="Artists" className="artist_image" src={artist_image}></img>
           <div className="beat-top-labels">
             <span className="trackname">{props.track.name}</span>
             <span className="artistsnames">{props.track.artists.map(o => o.name).join(', ')}</span>
@@ -38,7 +38,7 @@ function Beat(props) {
         </div>
 
         <div className="beat-middle">
-          <img className="album" src={album_image.url}></img>
+          <img alt="Album pic" className="album" src={album_image.url}></img>
         </div>
 
         <div className="beat-bottom">

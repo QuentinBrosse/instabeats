@@ -9,8 +9,8 @@ const bootstrap = ({ isLoggedIn, login, token, profile }) => {
       <div className="root">
         <div className="header">
           <div className="header-left">
-            <a href={profile.external_urls.spotify} target="_blank">
-              <img className="user_img" src={profile.images[0].url}></img>
+            <a href={profile.external_urls.spotify} target="_blank" rel="noopener noreferrer">
+              <img alt="User profile pic" className="user_img" src={profile.images[0].url}></img>
             </a>
             <span className="user_img-sub">{profile.id}</span>
           </div>
@@ -19,7 +19,7 @@ const bootstrap = ({ isLoggedIn, login, token, profile }) => {
             <span className="instabeat-sub">Music browser</span>
           </div>
           <div className="header-right">
-            <img src="help-24px.svg"></img>
+            <img alt="Help logo" src="help-24px.svg"></img>
           </div>
         </div>
 
