@@ -33,7 +33,7 @@ function Feed() {
   const ids = tracks.map(track => track.id)
 
   return (
-    <div className="feed" onTouchMove={() => onTouchMove(ids)}>
+    <div className="feed" onTouchMove={() => onTouchMove(ids)} onWheel={() => onTouchMove(ids)}>
       {tracks.map(t => t.preview_url && <Beat key={t.id} track={t}/>)}
     </div>
   )
