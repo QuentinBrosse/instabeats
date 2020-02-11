@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { AuthContext, AuthContextProvider, ConnectionVue } from './Connection'
+import Feed from './Feed'
+
+const bootstrap = ({ isLoggedIn, login, token, profile }) => {
+  if (isLoggedIn()) {
+    return (
+      <div>
+        <div>
+          User: {profile.display_name}
+        </div>
+
+        <Feed />
+      </div>
+    )
+  }
+  
+  return <ConnectionVue login={login} />
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContextProvider>
+      <AuthContext.Consumer>
+        {bootstrap}
+      </AuthContext.Consumer>
+    </AuthContextProvider>
   );
 }
 
