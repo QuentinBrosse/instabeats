@@ -20,10 +20,33 @@ export function pause(id) {
 }
 
 function Beat(props) {
+  const album_image = props.track.album.images.find(image => image.height === 300)
+  let artist_image = props.track.artists.filter(artist => Boolean(artist.images))
+  if(artist_image.length) {
+    artist_image = artist_image.images[0].url
+  } else {
+    artist_image = 'favicon.ico'
+  }
   return (
-    <div id={props.id + '-beat'} onClick={() => trigger(props.id)} className="beat">
-        <audio id={props.id + '-player'} controls>
-          <source src={props.src} type="audio/mpeg"></source>
+    <div id={props.track.id + '-beat'} onClick={() => trigger(props.track.id)} className="beat">
+        <div className="beat-top">
+          <img className="artist_image" src={artist_image}></img>
+          <div className="beat-top-labels">
+            <span className="trackname">{props.track.name}</span>
+            <span className="artistsnames">{props.track.artists.map(o => o.name).join(', ')}</span>
+          </div>
+        </div>
+
+        <div className="beat-middle">
+          <img className="album" src={album_image.url}></img>
+        </div>
+
+        <div className="beat-bottom">
+
+        </div>
+
+        <audio id={props.track.id + '-player'} controls>
+          <source src={props.track.src} type="audio/mpeg"></source>
         </audio>
     </div>
   )
