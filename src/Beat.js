@@ -45,8 +45,8 @@ function Beat(props) {
 
         </div>
 
-        <audio id={props.track.id + '-player'} controls>
-          <source src={props.track.src} type="audio/mpeg"></source>
+        <audio id={props.track.id + '-player'}>
+          <source src={props.track.preview_url} type="audio/mpeg"></source>
         </audio>
     </div>
   )

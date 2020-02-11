@@ -5,10 +5,6 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
-iframe {
-  display: none;
-}
-
 audio {
   display: none;
 }
