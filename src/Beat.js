@@ -46,7 +46,7 @@ function Beat(props) {
         </div>
 
         <div className="beat-middle">
-          <img alt="Album pic" className="album" src={album_image.url}></img>
+          <img alt="Album pic" id={props.track.id + '-album'} className="album" src={album_image.url}></img>
         </div>
 
         <div className="beat-bottom">
