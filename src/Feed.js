@@ -8,7 +8,7 @@ function onTouchMove(beats) {
       
       if(beat) {
         const rect = beat.getBoundingClientRect();
-        if(rect.top > 0 && rect.bottom < window.innerHeight) {
+        if(Math.abs(rect.top) < beat.offsetHeight / 2) {
           play(id)
         } else {
           pause(id)
