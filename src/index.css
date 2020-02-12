@@ -57,6 +57,9 @@ audio {
   align-items: flex-end;
   padding: 1%;
 }
+.beat-middle {
+  display: flex;
+}
 
 .trackname {
   font-size: 12px;
