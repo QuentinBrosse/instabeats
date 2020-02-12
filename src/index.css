@@ -13,6 +13,13 @@ audio {
   width: 100%;
 }
 
+.albumname {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+
+
 .playing {
   -webkit-box-shadow: 0px 14px 31px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 14px 31px 0px rgba(0,0,0,0.75);
@@ -59,8 +66,14 @@ audio {
 
 .artistsnames {
   font-size: 9px;
-  color: lightgray;
-  font-weight: 100;
+  color: #AFAFAF;
+  font-weight: 300;
+}
+
+.othernames {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .beat-top-labels {

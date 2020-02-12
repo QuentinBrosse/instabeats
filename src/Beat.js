@@ -41,7 +41,10 @@ function Beat(props) {
           <img alt="Artists" className="artist_image" src={artist_image}></img>
           <div className="beat-top-labels">
             <span className="trackname">{props.track.name}</span>
-            <span className="artistsnames">{props.track.artists.map(o => o.name).join(', ')}</span>
+            <span className="othernames">
+              <span className="albumname">{props.track.album.name}</span>
+              <span className="artistsnames">{props.track.artists.map(o => o.name).join(', ')}</span>
+            </span>
           </div>
         </div>
 
