@@ -44,7 +44,7 @@ audio {
   width: 100%;
   margin-bottom: 1vh;
   box-sizing: border-box;
-
+  border-bottom: 1px solid lightgray;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -59,6 +59,23 @@ audio {
 }
 .beat-middle {
   display: flex;
+}
+
+i {
+  margin-right: 5%;
+}
+
+i.colored {
+  color: red;
+  transition: color 0.3s ease-in-out;
+}
+
+.beat-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 1%;
+  padding-left: 3%;
 }
 
 .trackname {
