@@ -27,6 +27,15 @@ export function pause(id) {
   }
 }
 
+function like(id) {
+  let like = document.getElementById(id + '-like');
+  if(like.classList.contains('colored')) {
+    like.classList.remove('colored')
+  } else {
+    like.classList.add('colored')
+  }
+}
+
 function Beat(props) {
   const album_image = props.track.album.images.find(image => image.height === 300)
   let artist_image = props.track.artists.filter(artist => Boolean(artist.images))
@@ -36,12 +45,19 @@ function Beat(props) {
     artist_image = 'favicon.ico'
   }
   return (
-    <div id={props.track.id + '-beat'} onClick={() => trigger(props.track.id)} className="beat">
+    <div
+      id={props.track.id + '-beat'}
+      onClick={() => trigger(props.track.id)}
+      className="beat"
+    >
         <div className="beat-top">
           <img alt="Artists" className="artist_image" src={artist_image}></img>
           <div className="beat-top-labels">
             <span className="trackname">{props.track.name}</span>
-            <span className="artistsnames">{props.track.artists.map(o => o.name).join(', ')}</span>
+            <span className="othernames">
+              <span className="albumname">{props.track.album.name}</span>
+              <span className="artistsnames">{props.track.artists.map(o => o.name).join(', ')}</span>
+            </span>
           </div>
         </div>
 
@@ -50,7 +66,8 @@ function Beat(props) {
         </div>
 
         <div className="beat-bottom">
-
+          <i id={props.track.id + '-like'} onClick={() => like(props.track.id)} className="material-icons">favorite</i>
+          <i className="material-icons">send</i>
         </div>
 
         <audio id={props.track.id + '-player'}>

@@ -9,10 +9,10 @@ function onTouchMove(beats) {
       if(beat) {
         const rect = beat.getBoundingClientRect();
         if(Math.abs(rect.top) < beat.offsetHeight / 2) {
-          document.getElementById(id + '-album').classList.add('playing')
+          document.getElementById(id + '-beat').classList.add('playing')
           play(id)
         } else {
-          document.getElementById(id + '-album').classList.remove('playing')
+          document.getElementById(id + '-beat').classList.remove('playing')
           pause(id)
         }
       }

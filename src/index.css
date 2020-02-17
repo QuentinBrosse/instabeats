@@ -13,6 +13,13 @@ audio {
   width: 100%;
 }
 
+.albumname {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+
+
 .playing {
   -webkit-box-shadow: 0px 14px 31px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 14px 31px 0px rgba(0,0,0,0.75);
@@ -37,7 +44,7 @@ audio {
   width: 100%;
   margin-bottom: 1vh;
   box-sizing: border-box;
-
+  border-bottom: 1px solid lightgray;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -50,6 +57,26 @@ audio {
   align-items: flex-end;
   padding: 1%;
 }
+.beat-middle {
+  display: flex;
+}
+
+i {
+  margin-right: 5%;
+}
+
+i.colored {
+  color: red;
+  transition: color 0.3s ease-in-out;
+}
+
+.beat-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 1%;
+  padding-left: 3%;
+}
 
 .trackname {
   font-size: 12px;
@@ -59,8 +86,14 @@ audio {
 
 .artistsnames {
   font-size: 9px;
-  color: lightgray;
-  font-weight: 100;
+  color: #AFAFAF;
+  font-weight: 300;
+}
+
+.othernames {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .beat-top-labels {
