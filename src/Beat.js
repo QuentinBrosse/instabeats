@@ -11,12 +11,20 @@ function trigger(id) {
 
 export function play(id) {
   const audio = document.getElementById(id + '-player')
-  audio.play()
+  try {
+    audio.play()
+  } catch (error) {
+    
+  }
 }
 
 export function pause(id) {
   const audio = document.getElementById(id + '-player')
-  audio.pause()
+  try {
+    audio.pause()
+  } catch (error) {
+    
+  }
 }
 
 function Beat(props) {
@@ -38,7 +46,7 @@ function Beat(props) {
         </div>
 
         <div className="beat-middle">
-          <img alt="Album pic" className="album" src={album_image.url}></img>
+          <img alt="Album pic" id={props.track.id + '-album'} className="album" src={album_image.url}></img>
         </div>
 
         <div className="beat-bottom">
