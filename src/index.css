@@ -1,13 +1,137 @@
-body {
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+audio {
+  display: none;
+}
+
+.album {
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 12px 2px rgba(163,157,163,0.71);
+  -moz-box-shadow: 0px 3px 12px 2px rgba(163,157,163,0.71);
+  box-shadow: 0px 3px 12px 2px rgba(163,157,163,0.71);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.beat {
+  width: 100%;
+  margin-bottom: 1vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.beat-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 1%;
+}
+
+.trackname {
+  font-size: 12px;
+  color: black;
+  font-weight: 700;
+}
+
+.artistsnames {
+  font-size: 9px;
+  color: lightgray;
+  font-weight: 100;
+}
+
+.beat-top-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 1%;
+  flex: 1;
+}
+
+.artist_image {
+  width: 30px;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-top: 10vh;
+  -webkit-overflow-scrolling: touch;
+}
+
+.user_img { 
+  border-radius: 50%;
+  width: 40%;
+}
+
+.instabeat {
+  font-family: 'Oleo Script', cursive;
+  font-size: 4vh;
+  font-weight: 700;
+}
+
+.instabeat-sub {
+  font-size: 10px;
+  font-weight: 500;
+  color: lightgray
+}
+
+.header-central {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start
+}
+
+.header-left {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-right {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_img-sub {
+  font-size: 10px;
+  color: lightgray;
+  font-weight: 100;
+}
+
+a {
+  text-align: center;
 }

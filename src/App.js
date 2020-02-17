@@ -6,9 +6,21 @@ import Feed from './Feed'
 const bootstrap = ({ isLoggedIn, login, token, profile }) => {
   if (isLoggedIn()) {
     return (
-      <div>
-        <div>
-          User: {profile.display_name}
+      <div className="root">
+        <div className="header">
+          <div className="header-left">
+            <a href={profile.external_urls.spotify} target="_blank" rel="noopener noreferrer">
+              <img alt="User profile pic" className="user_img" src={profile.images[0].url}></img>
+            </a>
+            <span className="user_img-sub">{profile.id}</span>
+          </div>
+          <div className="header-central">  
+            <span className="instabeat">Instabeat</span>
+            <span className="instabeat-sub">Music browser</span>
+          </div>
+          <div className="header-right">
+            <img alt="Help logo" src="help-24px.svg"></img>
+          </div>
         </div>
 
         <Feed />
